@@ -6,5 +6,9 @@ type Props = {
 };
 
 export const SmoothScroll = ({ children }: Props) => {
-  return <ReactLenis root>{children}</ReactLenis>;
+  return (
+    <ReactLenis root>
+      {children}
+    </ReactLenis>
+  );
 };

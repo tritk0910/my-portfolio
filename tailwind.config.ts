@@ -16,6 +16,10 @@ const config: Config = {
       },
       fontFamily: {
         akira: ['"Akira Expanded"', "sans-serif"],
+        cocogoose: ['"Cocogoose"', "sans-serif"],
+      },
+      boxShadow: {
+        mobile: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
       },
     },
   },

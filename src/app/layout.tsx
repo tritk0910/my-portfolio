@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Bellota_Text } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/utils/SmoothScroll";
-import Logo from "@/components/utils/Logo";
 
-const inter = Bellota_Text({ weight: "700", subsets: ["latin"] });
+const inter = Montserrat({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Khai Tri",
@@ -19,13 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-[5000px]`}
+        className={`${inter.className} min-h-screen`}
         suppressHydrationWarning={true}
       >
-        <SmoothScroll>
-          <Logo />
-          {children}
-        </SmoothScroll>
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

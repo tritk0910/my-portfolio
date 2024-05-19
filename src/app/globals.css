@@ -7,6 +7,11 @@
   src: url("/fonts/akira-expanded.otf");
 }
 
+@font-face {
+  font-family: "Cocogoose";
+  src: url("/fonts/Cocogoose-Classic.ttf");
+}
+
 * {
   color-scheme: dark;
 }
