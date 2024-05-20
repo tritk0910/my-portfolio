@@ -22,6 +22,14 @@ const config: Config = {
       boxShadow: {
         mobile: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
       },
+      keyframes: {
+        slide: {
+          to: { transform: "translate(-100%)" },
+        },
+      },
+      animation: {
+        slide: "slide 10s linear infinite",
+      },
     },
   },
   plugins: [],

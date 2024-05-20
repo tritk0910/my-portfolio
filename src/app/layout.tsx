@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-screen overflow-hidden`}
+        className={`${inter.className} min-h-screen`}
         suppressHydrationWarning={true}
       >
         <SmoothScroll>

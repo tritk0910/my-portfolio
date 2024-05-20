@@ -1,4 +1,4 @@
-export const experiencedWith = [
+export const languages = [
   {
     icon: "html",
     src: "/svgs/languages/html.svg",
