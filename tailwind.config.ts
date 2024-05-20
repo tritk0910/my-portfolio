@@ -20,10 +20,11 @@ const config: Config = {
         heavitas: ['"Heavitas"', "sans-serif"],
       },
       boxShadow: {
-        mobile: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+        custom: "0px 5px 15px 0px rgba(0, 0, 0, 0.35);",
       },
       keyframes: {
         slide: {
+          from: { transform: "translate(0)" },
           to: { transform: "translate(-100%)" },
         },
       },

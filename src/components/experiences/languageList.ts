@@ -1,4 +1,4 @@
-export const languages = [
+export const languageList = [
   {
     icon: "html",
     src: "/svgs/languages/html.svg",

@@ -17,6 +17,10 @@
   src: url("/fonts/Heavitas.ttf");
 }
 
+body {
+  overflow: hidden;
+}
+
 * {
   color-scheme: dark;
 }

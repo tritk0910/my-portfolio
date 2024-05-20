@@ -16,7 +16,7 @@ export default function ProjectImage({ img, imgMobile }: Props) {
         width={3000}
         height={3000}
         alt="img"
-        className="rounded-xl shadow-mobile absolute -bottom-8 right-0 h-full w-auto"
+        className="rounded-xl shadow-custom absolute -bottom-8 right-0 h-full w-auto"
       />
     </div>
   );

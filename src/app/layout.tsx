@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { SmoothScroll } from "@/components/utils/SmoothScroll";
-import Footer from "@/components/layout/Footer";
-import Logo from "@/components/utils/Logo";
 
 const inter = Montserrat({ weight: "400", subsets: ["latin"] });
 
@@ -23,11 +20,7 @@ export default function RootLayout({
         className={`${inter.className} min-h-screen`}
         suppressHydrationWarning={true}
       >
-        <SmoothScroll>
-          <Logo />
-          {children}
-          <Footer />
-        </SmoothScroll>
+        {children}
       </body>
     </html>
   );

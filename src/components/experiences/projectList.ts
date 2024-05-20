@@ -1,5 +1,3 @@
-import { reverse } from "dns";
-
 export const ProjectList = [
   {
     title: "3KManga",

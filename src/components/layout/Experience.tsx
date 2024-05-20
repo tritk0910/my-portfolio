@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { languages } from "../experiences/languageList";
+import { languageList } from "../experiences/languageList";
 
 export default function Experience() {
   const itemStyling =
@@ -13,7 +13,7 @@ export default function Experience() {
       <div className="max-w-[1050px] h-full mx-auto overflow-hidden wrapper whitespace-nowrap">
         <div className="inline-block">
           <ul className={itemStyling}>
-            {languages.map((experience, index) => (
+            {languageList.map((experience, index) => (
               <li key={index}>
                 <Image
                   src={experience.src}
@@ -27,7 +27,7 @@ export default function Experience() {
         </div>
         <div className="inline-block">
           <ul className={itemStyling}>
-            {languages.map((experience, index) => (
+            {languageList.map((experience, index) => (
               <li key={index}>
                 <Image
                   src={experience.src}
