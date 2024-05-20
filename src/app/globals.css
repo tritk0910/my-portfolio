@@ -12,6 +12,11 @@
   src: url("/fonts/Cocogoose-Classic.ttf");
 }
 
+@font-face {
+  font-family: "Heavitas";
+  src: url("/fonts/Heavitas.ttf");
+}
+
 * {
   color-scheme: dark;
 }

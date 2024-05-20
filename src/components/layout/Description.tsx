@@ -24,7 +24,7 @@ export default function Description() {
             Khai Tri
           </span>
         </h1>
-        <span className="text-[rgb(255,255,255,0.7)]">
+        <p className="text-[rgb(255,255,255,0.7)]">
           As a recent graduate from the University of Greenwich, I specialize in
           React and its frameworks such as Next.JS, along with TypeScript for
           solid frontend development. I am adept at using Tailwind CSS and SASS
@@ -32,7 +32,7 @@ export default function Description() {
           skilled in API integrations. I am always eager to learn and adapt to
           new technologies to broaden my horizons and contribute effectively to
           any team.
-        </span>
+        </p>
       </div>
     </div>
   );
