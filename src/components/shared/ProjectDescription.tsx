@@ -1,5 +1,6 @@
 import ProjectLink from "./ProjectLink";
 import { afterBgColor } from "../theme/color";
+import { motion } from "framer-motion";
 
 type Props = {
   project: {
@@ -8,11 +9,19 @@ type Props = {
     github: string;
     live?: string;
   };
+  reverse?: boolean;
 };
 
-export default function ProjectDescription({ project }: Props) {
+export default function ProjectDescription({ project, reverse }: Props) {
+  const reverseValue = reverse ? 100 : -100;
   return (
-    <div className="flex flex-col justify-center items-center gap-4 max-w-[550px]">
+    <motion.div
+      className="flex flex-col justify-center items-center gap-4 max-w-[550px]"
+      initial={{ translateX: reverseValue, opacity: 0 }}
+      whileInView={{ translateX: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
+      viewport={{ once: true }}
+    >
       <h1
         className={`font-heavitas tracking-widest text-4xl relative ${afterBgColor}`}
       >
@@ -20,6 +29,6 @@ export default function ProjectDescription({ project }: Props) {
       </h1>
       <p className="text-[rgb(255,255,255,0.75)]">{project.description}</p>
       <ProjectLink github={project.github} live={project.live} />
-    </div>
+    </motion.div>
   );
 }

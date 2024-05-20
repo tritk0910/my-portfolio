@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { languageList } from "../experiences/languageList";
+import { motion } from "framer-motion";
 
 export default function Experience() {
   const itemStyling =
@@ -7,10 +8,22 @@ export default function Experience() {
 
   return (
     <div className="mb-32 flex flex-col gap-4 text-center">
-      <h1 className="text-3xl font-cocogoose tracking-widest">
+      <motion.h1
+        className="text-3xl font-cocogoose tracking-widest"
+        initial={{ translateY: -100, opacity: 0 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+      >
         I have experienced with
-      </h1>
-      <div className="max-w-[1050px] h-full mx-auto overflow-hidden wrapper whitespace-nowrap">
+      </motion.h1>
+      <motion.div
+        className="max-w-[1050px] h-full mx-auto overflow-hidden wrapper whitespace-nowrap"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: true }}
+      >
         <div className="inline-block">
           <ul className={itemStyling}>
             {languageList.map((experience, index) => (
@@ -39,7 +52,7 @@ export default function Experience() {
             ))}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

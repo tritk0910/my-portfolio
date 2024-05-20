@@ -9,8 +9,12 @@ export default function ProjectListStructure() {
           className={`flex gap-32 ${project.reverse && "flex-row-reverse"}`}
           key={index}
         >
-          <ProjectDescription project={project} />
-          <ProjectImage img={project.img} imgMobile={project.imgMobile} />
+          <ProjectDescription project={project} reverse={project.reverse} />
+          <ProjectImage
+            img={project.img}
+            imgMobile={project.imgMobile}
+            reverse={project.reverse}
+          />
         </div>
       ))}
     </div>

@@ -1,19 +1,30 @@
 import Image from "next/image";
 import { textColor } from "../theme/color";
+import { motion } from "framer-motion";
 
 export default function Description() {
   return (
     <div className="min-h-screen max-w-[1200px] mx-auto gap-36 p-20 flex text-center items-center">
       <div className="flex flex-col items-center cols-a">
-        <Image
+        <motion.img
           src={"/imgs/avatar.jpg"}
           width={4000}
           height={4000}
           alt="avt"
           className="rounded-full pointer-events-none"
-        />
+          initial={{ translateX: -100, opacity: 0 }}
+          whileInView={{ translateX: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once : true }}
+          />
       </div>
-      <div className="text-left text-md min-w-[350px] flex flex-col gap-3">
+      <motion.div
+        className="text-left text-md min-w-[350px] flex flex-col gap-3"
+        initial={{ translateX: 100, opacity: 0 }}
+        whileInView={{ translateX: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once : true }}
+      >
         <h1 className="font-cocogoose text-5xl">
           Hello, I am <span className={textColor}>Khai Tri</span>
         </h1>
@@ -26,7 +37,7 @@ export default function Description() {
           new technologies to broaden my horizons and contribute effectively to
           any team.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 }

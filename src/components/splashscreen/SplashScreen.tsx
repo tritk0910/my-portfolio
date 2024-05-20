@@ -26,13 +26,8 @@ export default function SplashScreen({
       targets: "#logo",
       opacity: [0, 1],
       easing: "easeOutCubic",
-      duration: 1000,
-    });
-    loader.add({
-      targets: "#logo",
-      opacity: [1, 1],
-      easing: "easeOutCubic",
-      delay: 1000,
+      duration: 500,
+      endDelay: 2500,
     });
   };
 
