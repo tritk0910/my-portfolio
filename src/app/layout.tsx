@@ -4,7 +4,6 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/utils/SmoothScroll";
 import Footer from "@/components/layout/Footer";
 import Logo from "@/components/utils/Logo";
-import Theme from "@/components/utils/Theme";
 
 const inter = Montserrat({ weight: "400", subsets: ["latin"] });
 
@@ -26,7 +25,6 @@ export default function RootLayout({
       >
         <SmoothScroll>
           <Logo />
-          <Theme />
           {children}
           <Footer />
         </SmoothScroll>

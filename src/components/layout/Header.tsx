@@ -15,18 +15,18 @@ export default function Header() {
         opacity: [0, 1],
         easing: "easeOutExpo",
         duration: 2000,
-        delay: (_d, i) => 100 + 30 * i,
+        delay: (_d, i) => 50 * i + 300,
       })
       .add(
         {
           targets: ".sub-text span",
           opacity: [0, 1],
-          translateY: [30, 0],
+          translateY: [10, 0],
           duration: 425,
           easing: "easeOutCubic",
           delay: (_d, i) => 50 * i + 300,
         },
-        500
+        1000
       );
   });
 
@@ -36,14 +36,14 @@ export default function Header() {
   return (
     <div className="flex flex-col relative min-h-screen justify-center items-center">
       <div className="relative">
-        <div className="author-text font-akira pointer-events-none text-9xl tracking-wider">
+        <div className="author-text font-akira pointer-events-none text-9xl tracking-wider overflow-hidden">
           {splitText.map((letter, i) => (
             <span key={i} className="inline-block">
               {letter === " " ? <>&nbsp;</> : letter}
             </span>
           ))}
         </div>
-        <div className="sub-text uppercase pointer-events-none tracking-widest absolute -bottom-7 -right-10 font-cocogoose text-2xl">
+        <div className="sub-text uppercase pointer-events-none tracking-widest absolute -bottom-7 -right-10 font-cocogoose text-2xl ">
           {splitSubText.map((letter, i) => (
             <span key={i} className="inline-block">
               {letter === " " ? <>&nbsp;</> : letter}

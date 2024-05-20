@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { textColor } from "../theme/color";
 
 export default function Description() {
   return (
@@ -10,19 +10,12 @@ export default function Description() {
           width={4000}
           height={4000}
           alt="avt"
-          loading="lazy"
           className="rounded-full pointer-events-none"
         />
       </div>
       <div className="text-left text-md min-w-[350px] flex flex-col gap-3">
         <h1 className="font-cocogoose text-5xl">
-          Hello, I am{" "}
-          <span
-            className="
-        bg-gradient-to-tr from-red-500 to-amber-500 bg-clip-text text-transparent"
-          >
-            Khai Tri
-          </span>
+          Hello, I am <span className={textColor}>Khai Tri</span>
         </h1>
         <p className="text-[rgb(255,255,255,0.7)]">
           As a recent graduate from the University of Greenwich, I specialize in

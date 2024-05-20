@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { bgColorOnHover, textColor } from "../theme/color";
 
 export default function Contact() {
   return (
@@ -8,13 +9,12 @@ export default function Contact() {
       </span>
       <div className="text-center">
         <h1 className="text-7xl font-heavitas">I can make it</h1>
-        <h2 className="text-5xl font-heavitas bg-gradient-to-tr from-red-500 to-amber-500 bg-clip-text text-transparent">
-          come true
-        </h2>
+        <h2 className={`text-5xl font-heavitas ${textColor}`}>come true</h2>
       </div>
       <Link
         href={"/contact"}
-        className="flex text-sm items-center gap-2 px-5 py-2 rounded-md bg-neutral-600 transition-all hover:bg-[rgba(255,255,255,0.5)]"
+        scroll
+        className={`flex items-center gap-2 px-6 py-3 bg-gradient-to-tr from-zinc-700 to-zinc-400 transition-all hover:brightness-110 hover:scale-105 ${bgColorOnHover} rounded-lg after:w-full after:h-full relative after:bg-gradient-to-tr after:from-zinc-600 after:to-red-500 after:absolute after:-z-10 after:scale-105 hover:after:opacity-100 after:opacity-0 after:transition-all after:blur-md after:top-0 after:left-0 after:rounded-lg active:brightness-75`}
       >
         <span>Get in touch</span>
         <svg

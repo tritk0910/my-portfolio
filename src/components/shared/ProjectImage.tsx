@@ -5,7 +5,6 @@ export default function ProjectImage({ img, imgMobile }: Props) {
   return (
     <div className="relative w-full h-full">
       <Image
-        loading="lazy"
         src={img}
         width={3000}
         height={3000}
@@ -13,7 +12,6 @@ export default function ProjectImage({ img, imgMobile }: Props) {
         className="rounded-xl w-[calc(100%-3rem)]"
       />
       <Image
-        loading="lazy"
         src={imgMobile}
         width={3000}
         height={3000}
