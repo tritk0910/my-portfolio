@@ -16,9 +16,9 @@ export default function ProjectDescription({ project, reverse }: Props) {
   const reverseValue = reverse ? 100 : -100;
   return (
     <motion.div
-      className="flex flex-col justify-center items-center gap-4 max-w-[550px]"
-      initial={{ translateX: reverseValue, opacity: 0 }}
-      whileInView={{ translateX: 0, opacity: 1 }}
+      className="flex flex-col justify-center items-center gap-4 max-w-[550px] text-sm md:text-base"
+      initial={{ translateY: reverseValue, opacity: 0 }}
+      whileInView={{ translateY: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
       viewport={{ once: true }}
     >

@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
   const itemStyling =
-    "[&_li]:px-10 py-3 [&_img]:max-w-[60px] flex py-4 animate-slide w-fit";
+    "[&_li]:px-4 md:[&_li]:px-7 lg:[&_li]:px-10 py-3 [&_img]:max-w-[40px] lg:[&_img]:max-w-[60px] xl:[&_img]:max-w-[80px] flex animate-slide w-fit";
 
   return (
-    <div className="flex flex-col gap-4 text-center">
+    <div className="flex flex-col gap-4 text-center my-10 xl:my-20">
       <motion.h1
-        className="text-3xl font-cocogoose tracking-widest"
+        className="text-2xl font-cocogoose tracking-widest mb-6 xl:mb-10 lg:mb-20 md:text-3xl lg:text-4xl"
         initial={{ translateY: -100, opacity: 0 }}
         whileInView={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        I have experienced with
+        Used at work
       </motion.h1>
       <motion.div
-        className="max-w-[1050px] h-full mx-auto overflow-hidden wrapper whitespace-nowrap"
+        className="max-w-[200px] md:max-w-[550px] lg:max-w-[750px] xl:max-w-[1150px] h-full mx-auto overflow-hidden wrapper whitespace-nowrap"
         initial={{ scale: 0, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}

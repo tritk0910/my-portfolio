@@ -65,8 +65,8 @@ export default function Home() {
         className={`fixed w-screen h-1 top-0 left-0 z-10 bg-red-500`}
         style={{ scaleX: scrollYProgress }}
       />
-      <div className="fixed h-screen min-w-[150px] top-0 left-0 z-20">
-        <div className="flex flex-col h-full gap-20 justify-center items-center [&_a]:w-2 [&_a]:h-2 [&_a]:m-[1vw] [&_a]:rounded-full [&_a]:cursor-pointer">
+      <div className="fixed h-screen w-12 lg:w-[150px] top-0 left-0 z-20">
+        <div className="flex flex-col h-full gap-11 lg:gap-20 justify-center items-center [&_a]:w-2 [&_a]:h-2 [&_a]:m-[1vw] [&_a]:rounded-full [&_a]:cursor-pointer">
           {scrollNavList.map((item, index) => (
             <a
               className="bullet transition duration-1000 hover:scale-150"
@@ -76,11 +76,13 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <Header ref={headerRef} />
-      <Description ref={descriptionRef} />
-      <Experience />
-      <Projects ref={projectRef} />
-      <Contact ref={contactRef} />
+      <div className="max-w-[1500px] mx-auto px-12 md:px-32">
+        <Header ref={headerRef} />
+        <Description ref={descriptionRef} />
+        <Experience />
+        <Projects ref={projectRef} />
+        <Contact ref={contactRef} />
+      </div>
     </main>
   );
 }

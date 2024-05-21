@@ -1,6 +1,4 @@
 "use client";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import anime from "animejs";
 import { forwardRef, useEffect } from "react";
 
@@ -65,14 +63,14 @@ export default forwardRef<HTMLDivElement>(function Header(_props, ref) {
       ref={ref}
     >
       <div className="relative">
-        <div className="author-text font-akira pointer-events-none text-9xl tracking-wider overflow-hidden">
+        <div className="author-text font-akira pointer-events-none text-4xl md:text-6xl lg:text-7xl xl:text-9xl tracking-wider overflow-hidden">
           {splitText.map((letter, i) => (
             <span key={i} className="inline-block">
               {letter === " " ? <>&nbsp;</> : letter}
             </span>
           ))}
         </div>
-        <div className="sub-text uppercase pointer-events-none tracking-widest absolute -bottom-7 -right-10 font-cocogoose text-2xl ">
+        <div className="sub-text uppercase pointer-events-none tracking-widest absolute -bottom-5 lg:-bottom-7 -right-10 font-cocogoose text-[12px] md:text-md lg:text-lg xl:text-2xl ">
           {splitSubText.map((letter, i) => (
             <span key={i} className="inline-block">
               {letter === " " ? <>&nbsp;</> : letter}
@@ -82,7 +80,20 @@ export default forwardRef<HTMLDivElement>(function Header(_props, ref) {
       </div>
       <div className="absolute flex flex-col gap-2 bottom-20 text-[rgb(255,255,255,0.7)]">
         <div className="text-center" id="arrow">
-          <FontAwesomeIcon icon={faChevronDown} size="2xl" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m19.5 8.25-7.5 7.5-7.5-7.5"
+            />
+          </svg>
         </div>
       </div>
     </section>

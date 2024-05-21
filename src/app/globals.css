@@ -18,8 +18,12 @@
 }
 
 body {
-  overflow: hidden;
   user-select: none;
+}
+
+/* transparent scrollbar */
+::-webkit-scrollbar {
+  display: none;
 }
 
 * {

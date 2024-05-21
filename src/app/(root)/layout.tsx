@@ -1,6 +1,6 @@
 "use client";
+import SplashScreen from "@/components/intro/SplashScreen";
 import Footer from "@/components/layout/Footer";
-import SplashScreen from "@/components/splashscreen/SplashScreen";
 import Logo from "@/components/utils/Logo";
 import { SmoothScroll } from "@/components/utils/SmoothScroll";
 import { usePathname } from "next/navigation";
@@ -12,10 +12,9 @@ type Props = {
 
 export default function Layout({ children }: Props) {
   const pathname = usePathname();
-  const isHome = pathname === "/";
-  const [isLoading, setIsLoading] = useState(isHome);
+  const [isLoading, setIsLoading] = useState(true);
   const [isRepositioned, setIsRepositioned] = useState(false);
-  const [isVisible, setIsVisible] = useState(!isHome);
+  const [isVisible, setIsVisible] = useState(!true);
 
   useEffect(() => {
     const handleContextMenu = (event: MouseEvent) => {
@@ -31,7 +30,7 @@ export default function Layout({ children }: Props) {
 
   return (
     <>
-      {isLoading && isHome ? (
+      {isLoading ? (
         <SplashScreen
           isRepositioned={isRepositioned}
           setIsRepositioned={setIsRepositioned}

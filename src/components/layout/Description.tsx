@@ -16,16 +16,16 @@ export default forwardRef<HTMLDivElement>(function Description(_props, ref) {
 
   return (
     <section
-      className="min-h-screen max-w-[1200px] mx-auto gap-36 p-20 flex text-center items-center"
+      className="gap-12 xl:gap-32 justify-center min-h-screen flex flex-col lg:flex-row text-center items-center"
       ref={ref}
     >
-      <div className="flex flex-col items-center cols-a">
+      <div className="flex flex-col items-center">
         <motion.img
           src={"/imgs/avatar.jpg"}
           width={4000}
           height={4000}
           alt="avt"
-          className="rounded-full pointer-events-none"
+          className="rounded-md md:rounded-3xl lg:rounded-full pointer-events-none"
           initial={{ translateX: -100, opacity: 0 }}
           whileInView={{ translateX: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
@@ -33,16 +33,16 @@ export default forwardRef<HTMLDivElement>(function Description(_props, ref) {
         />
       </div>
       <motion.div
-        className="text-left text-md min-w-[350px] flex flex-col gap-3"
-        initial={{ translateX: 100, opacity: 0 }}
-        whileInView={{ translateX: 0, opacity: 1 }}
+        className="text-left text-md flex flex-col gap-3"
+        initial={{ translateY: 100, opacity: 0 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <h1 className="font-cocogoose text-5xl">
+        <h1 className="font-cocogoose text-2xl xl:text-5xl">
           Hello, I&apos;m <span className={textColor}>Khai Tri</span>
         </h1>
-        <p className="text-[rgb(255,255,255,0.7)]">
+        <p className="text-[rgb(255,255,255,0.7)] text-sm md:text-md xl:text-lg">
           As a recent graduate from the University of Greenwich, I specialize in
           React and its frameworks such as Next.JS, along with TypeScript for
           solid frontend development. I am adept at using Tailwind CSS and SASS
@@ -51,8 +51,8 @@ export default forwardRef<HTMLDivElement>(function Description(_props, ref) {
           new technologies to broaden my horizons and contribute effectively to
           any team.
         </p>
-        <div className="flex gap-5 text-red-500">
-          <div className="flex items-center gap-1 text-lg">
+        <div className="flex items-center gap-2 md:gap-5 text-red-500 text-sm md:text-md xl:text-lg">
+          <div className="flex items-center gap-1">
             <span>My links</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ export default forwardRef<HTMLDivElement>(function Description(_props, ref) {
               />
             </svg>
           </div>
-          <div className="flex gap-5 text-[rgb(255,255,255,0.7)]">
+          <div className="flex text-[rgb(255,255,255,0.7)] gap-2 md:gap-5">
             <button
               onClick={downloadCv}
               className="transition hover:text-red-500"
