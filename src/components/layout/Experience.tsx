@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
   const itemStyling =
-    "[&_li]:px-10 py-3 [&_img]:max-w-[100px] flex py-4 animate-slide w-fit";
+    "[&_li]:px-10 py-3 [&_img]:max-w-[60px] flex py-4 animate-slide w-fit";
 
   return (
-    <div className="mb-32 flex flex-col gap-4 text-center">
+    <div className="flex flex-col gap-4 text-center">
       <motion.h1
         className="text-3xl font-cocogoose tracking-widest"
         initial={{ translateY: -100, opacity: 0 }}
@@ -19,8 +19,8 @@ export default function Experience() {
       </motion.h1>
       <motion.div
         className="max-w-[1050px] h-full mx-auto overflow-hidden wrapper whitespace-nowrap"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ scale: 0, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
       >

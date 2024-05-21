@@ -1,10 +1,13 @@
-import Link from "next/link";
-import { bgColorOnHover, textColor } from "../theme/color";
+import { textColor } from "../theme/color";
 import { motion } from "framer-motion";
+import { forwardRef } from "react";
 
-export default function Contact() {
+export default forwardRef<HTMLDivElement>(function Contact(_props, ref) {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 min-h-[70vh]">
+    <section
+      className="flex flex-col justify-center items-center gap-6 min-h-[90vh]"
+      ref={ref}
+    >
       <motion.span
         className="uppercase font-cocogoose text-sm tracking-widest text-[rgb(255,255,255,0.7)]"
         initial={{ translateY: -100, opacity: 0 }}
@@ -35,33 +38,32 @@ export default function Contact() {
         </motion.h2>
       </div>
       <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{ scale: 1 }}
-        transition={{ duration: 1, delay: 0.5, type: "spring" }}
+        className="flex gap-4 flex-col"
+        initial={{ translateY: 30, opacity: 0 }}
+        whileInView={{ translateY: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <Link
-          href={"/contact"}
-          scroll
-          className={`flex items-center gap-2 px-7 py-3 bg-gradient-to-tr from-zinc-700 to-zinc-400 transition-all hover:brightness-110 hover:scale-105 ${bgColorOnHover} rounded-lg after:w-full after:h-full relative after:bg-gradient-to-tr after:from-zinc-600 after:to-red-500 after:absolute after:-z-10 after:scale-105 hover:after:opacity-100 after:opacity-0 after:transition-all after:blur-md after:top-0 after:left-0 after:rounded-lg active:brightness-75`}
-        >
-          <span>Get in touch</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-4 h-4"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-            />
-          </svg>
-        </Link>
+        <span className="text-[rgb(255,255,255,0.8)]">
+          Shoot me an email if you want to connect!
+        </span>
+        <a href="mailto:khaitri074@gmail.com">
+          <div className="flex justify-center items-center gap-2 text-2xl tracking-wide] transition hover:text-red-500 text-[rgb(255,255,255,0.8)]">
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              height="2.4rem"
+              width="2.4rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 0 1 194 256h648.8a7.2 7.2 0 0 1 4.4 12.9z"></path>
+            </svg>
+            <span>khaitri074@gmail.com</span>
+          </div>
+        </a>
       </motion.div>
-    </div>
+    </section>
   );
-}
+});

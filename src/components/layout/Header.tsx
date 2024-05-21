@@ -2,9 +2,9 @@
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import anime from "animejs";
-import { useEffect } from "react";
+import { forwardRef, useEffect } from "react";
 
-export default function Header() {
+export default forwardRef<HTMLDivElement>(function Header(_props, ref) {
   const text = "Khai Tri";
   const subText = "Front-end React Developer";
 
@@ -60,7 +60,10 @@ export default function Header() {
   const splitSubText = subText.split("");
 
   return (
-    <div className="flex flex-col min-h-screen justify-center items-center relative">
+    <section
+      className="flex flex-col min-h-screen justify-center items-center relative"
+      ref={ref}
+    >
       <div className="relative">
         <div className="author-text font-akira pointer-events-none text-9xl tracking-wider overflow-hidden">
           {splitText.map((letter, i) => (
@@ -82,6 +85,6 @@ export default function Header() {
           <FontAwesomeIcon icon={faChevronDown} size="2xl" />
         </div>
       </div>
-    </div>
+    </section>
   );
-}
+});

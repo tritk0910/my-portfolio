@@ -15,5 +15,15 @@ export const SmoothScroll = ({ children }: Props) => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  return <ReactLenis root>{children}</ReactLenis>;
+  return (
+    <ReactLenis
+      root
+      options={{
+        lerp: 0.1,
+        smoothWheel: true,
+      }}
+    >
+      {children}
+    </ReactLenis>
+  );
 };

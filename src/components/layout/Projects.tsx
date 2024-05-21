@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 import ProjectListStructure from "../ProjectStructure/ProjectItem";
+import { forwardRef } from "react";
 
-export default function Projects() {
+export default forwardRef<HTMLDivElement>(function Projects(_props, ref) {
   return (
-    <div className={`text-center max-w-[1400px] mx-auto my-32`}>
+    <section className={`py-20 text-center max-w-[1400px] mx-auto`} ref={ref}>
       <motion.h1
         className="text-3xl font-cocogoose tracking-widest mb-20"
         initial={{ translateY: -100, opacity: 0 }}
@@ -14,6 +15,6 @@ export default function Projects() {
         Here is some of my worked or working project
       </motion.h1>
       <ProjectListStructure />
-    </div>
+    </section>
   );
-}
+});
